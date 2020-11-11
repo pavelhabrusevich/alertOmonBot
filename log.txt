@@ -1,0 +1,2 @@
+{"update_id":561113121,
+"message":{"message_id":1859,"from":{"id":656673580,"is_bot":false,"first_name":"Rita","last_name":"Habrusevich","language_code":"ru"},"chat":{"id":656673580,"first_name":"Rita","last_name":"Habrusevich","type":"private"},"date":1605029821,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}
