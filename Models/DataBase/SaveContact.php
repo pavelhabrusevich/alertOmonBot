@@ -1,14 +1,10 @@
 <?php
 
-//namespace Models\DataBase\SaveContact;
-namespace Models;
+namespace Models\DataBase;
 
-//require __DIR__ . '/DataBase.php';
+use \Models\DataBase\DataBase  as DataBase;
 
-//use \Models\DataBase\DataBase;
-
-//class SaveContact implements DataBase
-class SaveContact
+class SaveContact implements DataBase
 {
     protected $contact;
 

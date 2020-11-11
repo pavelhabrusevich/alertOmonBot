@@ -4,11 +4,11 @@ include('vendor/autoload.php');
 
 use Telegram\Bot\Api;
 use Telegram\Bot\Keyboard\Keyboard;
-use Models\DBConnection;
-use Models\SaveContact;
-use Models\SaveFriendContact;
-use Models\IsContact;
-use Models\FriendId;
+use Models\DataBase\DBConnection;
+use Models\DataBase\SaveContact;
+use Models\DataBase\SaveFriendContact;
+use Models\DataBase\IsContact;
+use Models\DataBase\FriendId;
 use Models\MsgResponse;
 use Models\CallBackResponse;
 use Models\Contact;
@@ -40,7 +40,7 @@ switch ($msgResponse->text()) {
             ->row($keyboard->inlineButton(['text' => 'Add my contact', 'callback_data' => "my_contact"]));
         $telegram->sendMessage([
             'chat_id' => $msgResponse->chatId(),
-            'text' => 'Alert Bot for your safety. Click any button for further action',
+            'text' => 'Alert Bot for your safety. You need add friend contact. Click any button for further action',
             'reply_markup' => $inlineButton
         ]);
         break;

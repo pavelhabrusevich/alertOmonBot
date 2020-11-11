@@ -1,12 +1,10 @@
 <?php
 
-//namespace Models\DataBase\IsContact;
-namespace Models;
+namespace Models\DataBase;
 
-//use \Models\DataBase\DataBase;
+use \Models\DataBase\DataBase  as DataBase;
 
-//class IsContact implements DataBase
-class IsContact
+class IsContact implements DataBase
 {
     protected $user;
     protected $table;

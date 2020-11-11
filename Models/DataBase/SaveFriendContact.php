@@ -1,12 +1,10 @@
 <?php
 
-//namespace Models\DataBase\SaveFriendContact;
-namespace Models;
+namespace Models\DataBase;
 
-//use \Models\DataBase\DataBase;
+use \Models\DataBase\DataBase  as DataBase;
 
-//class SaveFriendContact implements DataBase
-class SaveFriendContact
+class SaveFriendContact implements DataBase
 {
     protected $contact;
     protected $parentUserId;

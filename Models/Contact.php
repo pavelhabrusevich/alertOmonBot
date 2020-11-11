@@ -12,13 +12,13 @@ class Contact
     }
 
     public function userContact(){
-        if ($this->result["message"]["chat"]["id"] == $this->result["message"]["contact"]["user_id"]){
-            return $this->result['message']['contact'];
+        if (isset($this->result["message"]["chat"]["id"]) == isset($this->result["message"]["contact"]["user_id"])){
+            return isset($this->result['message']['contact']);
         }
     }
 
     public function friendContact(){
-        if ($this->result["message"]["chat"]["id"] !== $this->result["message"]["contact"]["user_id"]){
+        if (isset($this->result["message"]["chat"]["id"]) !== isset($this->result["message"]["contact"]["user_id"])){
             return $this->result['message']['contact'];
         }
     }

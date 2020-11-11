@@ -1,11 +1,10 @@
 <?php
 
-namespace Models;
+namespace Models\DataBase;
 
-//use \Models\DataBase\DataBase;
+use \Models\DataBase\DataBase as DataBase;
 
-//class FriendId implements DataBase
-class FriendId
+class FriendId implements DataBase
 {
     protected $userId;
 
