@@ -1,6 +1,5 @@
 <?php
 
-//namespace Models\DBConnection;
 namespace Models;
 
 class DBConnection

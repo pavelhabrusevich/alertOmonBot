@@ -1,6 +1,5 @@
 <?php
 
-//namespace Models\CallBackResponse;
 namespace Models;
 
 class CallBackResponse

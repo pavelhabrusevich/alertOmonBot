@@ -1,6 +1,5 @@
 <?php
 
-//namespace Models\Environment;
 namespace Models;
 
 class Environment

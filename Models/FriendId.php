@@ -1,6 +1,5 @@
 <?php
 
-//namespace Models\DataBase\FriendId;
 namespace Models;
 
 //use \Models\DataBase\DataBase;

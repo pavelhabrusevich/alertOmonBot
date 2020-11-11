@@ -1,6 +1,5 @@
 <?php
 
-//namespace Models\MsgResponse;
 namespace Models;
 
 class MsgResponse
