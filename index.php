@@ -1,6 +1,7 @@
 <?php
 
 include('vendor/autoload.php');
+require 'Models/loger.php';
 
 use Telegram\Bot\Api;
 use Telegram\Bot\Keyboard\Keyboard;
@@ -14,8 +15,6 @@ use Models\CallBackResponse;
 use Models\Contact;
 use Models\Environment;
 
-// запись ответов с телеграмм в файл log.txt
-file_put_contents( __DIR__ . 'log.txt', file_get_contents('php://input'));
 
 // настройка Webhook, Api
 $token = new Environment();
@@ -40,7 +39,7 @@ switch ($msgResponse->text()) {
             ->row($keyboard->inlineButton(['text' => 'Add my contact', 'callback_data' => "my_contact"]));
         $telegram->sendMessage([
             'chat_id' => $msgResponse->chatId(),
-            'text' => 'Alert Bot for your safety. You need add friend contact. Click any button for further action',
+            'text' => 'Alert Bot for your safety. You need add friend contact and your contact. Click any button for further action',
             'reply_markup' => $inlineButton
         ]);
         break;

@@ -4,6 +4,10 @@ namespace Models\DataBase;
 
 use \Models\DataBase\DataBase as DataBase;
 
+/**
+ * Class FriendId
+ * @package Models\DataBase
+ */
 class FriendId implements DataBase
 {
     protected $userId;
@@ -13,6 +17,10 @@ class FriendId implements DataBase
         $this->userId = $userId;
     }
 
+    /**
+     * @param $dbconnection
+     * @return FriendId
+     */
     public function getId($dbconnection)
     {
         $friends = mysqli_query($dbconnection,"SELECT `friend_chat_id` FROM `friends` WHERE `user_chat_id` = '$this->userId'");

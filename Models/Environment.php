@@ -2,6 +2,10 @@
 
 namespace Models;
 
+/**
+ * Class Environment
+ * @package Models
+ */
 class Environment
 {
     const TOKEN = '1274358640:AAFGPDZ15k9YrOAxKtsxcfi23oOx5hLrHpg';

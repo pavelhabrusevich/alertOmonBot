@@ -4,6 +4,10 @@ namespace Models\DataBase;
 
 use \Models\DataBase\DataBase  as DataBase;
 
+/**
+ * Class SaveFriendContact
+ * @package Models\DataBase
+ */
 class SaveFriendContact implements DataBase
 {
     protected $contact;

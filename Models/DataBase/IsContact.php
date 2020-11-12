@@ -4,6 +4,10 @@ namespace Models\DataBase;
 
 use \Models\DataBase\DataBase  as DataBase;
 
+/**
+ * Class IsContact
+ * @package Models\DataBase
+ */
 class IsContact implements DataBase
 {
     protected $user;
@@ -17,6 +21,10 @@ class IsContact implements DataBase
         $this->column = $column;
     }
 
+    /**
+     * @param $dbconnection
+     * @return IsContact if exists
+     */
     public function isSet($dbconnection){
         $chatId = $this->user['user_id'];
         $query = "SELECT * FROM `$this->table` WHERE `$this->column` = '$chatId'";

@@ -2,6 +2,11 @@
 
 namespace Models\DataBase;
 
+/**
+ * Class DBConnection
+ * @package Models\DataBase
+ * create DB Connection
+ */
 class DBConnection
 {
     protected $host;

@@ -2,6 +2,10 @@
 
 namespace Models;
 
+/**
+ * Class Contact
+ * @package Models
+ */
 class Contact
 {
     protected $result;
@@ -11,14 +15,24 @@ class Contact
         $this->result = $result;
     }
 
+    /**
+     * @return main user contact
+     */
     public function userContact(){
-        if (isset($this->result["message"]["chat"]["id"]) == isset($this->result["message"]["contact"]["user_id"])){
-            return isset($this->result['message']['contact']);
+        if (isset($this->result["message"]["chat"]["id"])
+            && isset($this->result["message"]["contact"]["user_id"])
+            && $this->result["message"]["chat"]["id"] == $this->result["message"]["contact"]["user_id"]){
+            return $this->result['message']['contact'];
         }
     }
 
+    /**
+     * @return friend contact
+     */
     public function friendContact(){
-        if (isset($this->result["message"]["chat"]["id"]) !== isset($this->result["message"]["contact"]["user_id"])){
+        if (isset($this->result["message"]["chat"]["id"])
+            && isset($this->result["message"]["contact"]["user_id"])
+            && $this->result["message"]["chat"]["id"] !== $this->result["message"]["contact"]["user_id"]){
             return $this->result['message']['contact'];
         }
     }
